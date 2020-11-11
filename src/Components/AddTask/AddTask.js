@@ -15,12 +15,17 @@ function AddTask(props) {
         props.setGrow(!props.grow)
     }
 
+    const taskHandler = (e) => {
+        // var task = e.target.value
+        // props.setTasks([task])
+    }
+
     return (
         <div className="addtask__container">
             <div className="closeBtn" onClick={addHandler} >
                 <FontAwesomeIcon icon={faTimes} />
             </div>
-            <input type="text" name="" id="" autoFocus={true} placeholder="What would you like to add ?" />
+            <input type="text" name="" id="" onChange={(e) => taskHandler(e)} autoFocus={true} placeholder="What would you like to add ?" />
             <div className="overlay" onClick={addHandler} style={overlayStyle}></div>
         </div>
     )

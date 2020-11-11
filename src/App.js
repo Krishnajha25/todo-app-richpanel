@@ -28,7 +28,6 @@ function App() {
 
   const [tasks, setTasks] = useState(Tasks)
   const [grow, setGrow] = useState(false)
-  const [isDragged, setIsDragged] = useState(false)
 
   const addHandler = () => {
     setGrow(!grow)
@@ -42,15 +41,6 @@ function App() {
     }
   }
 
-  const showInput= () => {
-    if(grow){
-      return <h1>Input is enabled</h1>
-    }
-  }
-
-  const listTodos = tasks.map(task => {
-    <Task />
-  })
 
   // var date = 
   return (
@@ -61,7 +51,7 @@ function App() {
         { tasks.map(task => <Task task={task.title} date={task.date} />) }
       </div>
     
-      { grow && <AddTask setGrow={setGrow} grow={grow} /> }
+      { grow && <AddTask setGrow={setGrow} setTask={setTasks} grow={grow} /> }
       <div className={`btn addBtn ${grow? 'grow': ''}`} onClick={addHandler}>
         <FontAwesomeIcon icon={faPlus} />
       </div>
