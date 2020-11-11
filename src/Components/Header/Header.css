@@ -1,0 +1,22 @@
+.header__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user__profile img{
+    width: 60px;
+    border-radius: 50%;
+}
+
+.username__tasks h1{
+    margin-bottom: 0px;
+    color: #333;
+}
+
+.username__tasks p{
+    margin-top: 5px;
+    font-size: 16px;
+    color: #808080;
+}
