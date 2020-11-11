@@ -33,6 +33,7 @@ function App() {
     setGrow(!grow)
   }
 
+  var isDragged = false
   const delBtn = () => {
     if(isDragged){
       return <div className="btn delBtn">
