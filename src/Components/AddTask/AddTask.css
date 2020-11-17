@@ -6,7 +6,7 @@
     width: 100%;
     background: #fafafa;
     z-index: 2;
-    animation: slide-up 0.3s ease;
+
 }
 
 input[type='text']{
@@ -33,15 +33,4 @@ input[type='text']::placeholder{
     padding-left: 10px;
     padding-top: 15px;
     margin-left: 5%;
-}
-
-@keyframes slide-up{
-    0%{
-        top: 150px;
-        opacity: 0;
-    }
-    100%{
-        top: 0;
-        opacity: 1;
-    }
 }
